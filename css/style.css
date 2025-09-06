@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* estilização corpo da página */
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e6e6;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  max-width: 720px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  justify-content: space-between;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+/* circulo de fundo */
+.container::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0 12px 12px 0;
+  clip-path: circle(60% at right 40%);
+  background: linear-gradient(135deg, #8b2e5e, #662b88);
+  z-index: -1;
+}
+
+/* efeito hover */
+.container:hover {
+  transform: scale(1.05);
+}
+
+/* box one (descrição) */
+.topic h2 {
+  color: #3eb4ae;
+  font-weight: 600;
+  font-size: 30px;
+}
+.box.one {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.box.one .details {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+/* descrição camiseta */
+.box.one .details p {
+  color: #737373;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: justify;
+  margin-top: 10px;
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+/* avaliação estrelas */
+.box.one .details .rating i {
+  color: #8b2e5e;
+  margin: 10px 3px 0 0;
+}
+
+.box.one .details .price-box {
+  margin-top: 16px;
+}
+
+.details .price-box .discount {
+  font-size: 20px;
+  color: #737373;
+  margin: 10px 0 0 12px;
+  position: relative;
+}
+
+/* risco no preço anterior */
+.details .price-box .discount::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 85px;
+  background-color: #737373;
+  top: 50%;
+  left: -4px;
+}
+
+.details .price-box .price {
+  color: #8b2e5e;
+  font-size: 30px;
+}
+
+/* botão adicionar ao carrinho */
+.box.one .button1 {
+  margin: 45px 0 25px 0;
+}
+
+.box.one .button1 button {
+  outline: none;
+  height: 45px;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  padding: 8px 16px;
+  background-color: #3eb4ae;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* efeito hover */
+.box.one .button1 button:hover {
+  transform: scale(0.98);
+  background: transparent;
+  border: 1px solid #3eb4ae;
+  color: #3eb4ae;
+}
+
+/* box2 */
+.box.two {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+/* definiçãoe stilo imagem */
+.image-box {
+  width: 100%;
+  max-width: 250px;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.info {
+  margin-top: -25px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.info .brand {
+  font-size: 17px;
+  font-weight: 600;
+  color: #3eb4ae;
+  text-transform: uppercase;
+}
+
+.info .name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 5px;
+  color: #fff;
+}
+
+.info .shipping {
+  font-size: 14px;
+  font-weight: 400;
+  color: #cacaca;
+  margin: 5px 0;
+}
+
+/* botão saiba mais */
+.info .button2 button {
+  color: #fff;
+  outline: none;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #fff;
+  transition: all 0.3s ease;
+}
+
+/* efeito hover */
+.info .button2 button:hover {
+  background-color: #3eb4ae;
+  color: #fff;
+  border: 0;
+}
